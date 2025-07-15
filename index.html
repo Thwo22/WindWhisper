@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WindWhisper</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <!--sub-container onde ficarão os inputs-->
+        <div class="form"> 
+            <p>Confira o clima de uma cidade:</p>
+
+            <div class="input_container"> <!--container dedicado a inserção das inforções feitas pelos usuários-->
+                <input type="text" 
+                placeholder='Digite o nome da cidade' 
+                id='city-input' /> 
+
+                <!--botão que buscará o resultado da pesquisa feita pelo usuário-->
+
+                <button id='search'> 
+                    <i class="fa-solid fa-magnifying-glass"></i> <!--icone de lupa-->
+                </button>
+            </div>
+        </div>
+
+        <!--sub-container onde ficarão os resultados da busca feita pela API-->
+        <div id="weather_data"> 
+            <h2>
+                <i class="fa-solid fa-location-dot"></i> <!--icone de localização-->
+                <span id='city'>Ribeirão Pires</span> <!--span que mostra o nome da cidade digitada pelo usuário*/-->
+                <img src="https://flagcdn.com/16x12/br.png" alt="bandeira do país" /> <!--imagem onde ficará o ícone do país de acordo com a cidade inserida-->
+            </h2>
+            <p id='temperature'>
+                <span>38</span>&deg;C 
+            </p> <!--paragrafó dinâmico com a temperatura medida em celsius-->
+
+            <!--container que mostrará a condição climática da cidade inserida-->
+            <div id="decription_container">
+                <p id='description'>Nublado</p>
+                <img src="http://openweathermap.org/img/wn/01d.png" alt="condições do tempo" id='weather-icon'/> <!--ícone ilustrado semelhante à condição descrita acima -->
+            </div>
+
+            <!--container que mostrará mais detalhes como a velocidade dos Ventos e porcentagem de Umidade da cidade-->
+            <div id="details_container">
+                <p id='umidity'>
+                    <i class="fa-solid fa-droplet"></i>
+                    <span></span>
+                </p>
+                <p id='wind'>
+                    <i class="fa-solid fa-wind"></i>
+                    <span></span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="env.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
