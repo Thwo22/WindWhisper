@@ -14,9 +14,7 @@ const weatherContainer = document.querySelector("#weather-data")
 //funcoes
 
 const getWeatherData = async (city) => {
-    const apiWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${OPENWEATHER_KEY}&lang=pt_br`
-
-    const res = await fetch(apiWeatherUrl);
+    const res = await fetch(`/api/weather?city=${city}`);
     const data = await res.json();
 
     return data
