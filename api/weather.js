@@ -1,3 +1,5 @@
+/*este arquivo é dedicado a proteger a chave da api usada na aplicação web. É uma proteção utilizada através do Vercel.*/
+
 export default async function handler(req, res) {
     const {city} = req.query; 
 

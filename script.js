@@ -20,6 +20,7 @@ const getWeatherData = async (city) => {
     return data
 };
 
+//abaixo, estão todas os campos que serão preenchidos pelas informações trazidas pela API.
 const showWeatherData = async (city) => {
     
     const data = await getWeatherData(city);
