@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-/*GLOBAIS*/
+/*-----------------------------------------------------------------------------------GLOBAIS--------------------------------------------------------------------------------------*/
 :root {
   --font-padrao: "Lato", sans-serif;
 }
@@ -20,11 +20,12 @@ body {
   background-image: linear-gradient(180deg, rgb(88, 170, 218), white);
 }
 
-/*INPUTS*/
+/*-------------------------------------------------------------------------------------INPUTS---------------------------------------------------------------------------------------*/
 .hide {
   display: none;
 }
 
+/*container principal*/
 .container {
   background-color: rgb(42, 73, 114);
   padding: 1.5em;
@@ -32,18 +33,21 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.548);
 }
 
+/*todos os paragrafos do container principal*/
 .container p {
   color: rgb(247, 247, 247);
   text-align: center;
   padding: 0.5em;
 }
 
+/*área da barra de texto e do botão de submit*/
 .input_container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/*estilização da barra de texto*/
 .input_container input{
   all: unset;
   flex: 0fr;
@@ -53,6 +57,7 @@ body {
   margin-right: 3px;
 }
 
+/*estilização do botão de submit*/
 .input_container button {
   all: unset;
   background-color:  rgb(88, 170, 218);
@@ -62,8 +67,9 @@ body {
   cursor: pointer;
 }
 
-/*RESULTADOS DA API*/
+/*-----------------------------------------------------------RESULTADOS DA API-------------------------------------------------------------*/
 
+/*titulo onde é escrito os nomes das cidades ou países*/
 #weather-data h2{
   text-align: center;
   color: rgb(241, 241, 241);
@@ -72,11 +78,13 @@ body {
   margin-top: 1em;
 }
 
+/*bandeira ao lado dos países ou cidades*/
 #weather-data img {
   height: 15px;
   width: 21px;
 }
 
+/*container onde fica informações como condições do tempo e seus respectivos ícones*/
 #decription_container  {
   display: flex;
   flex-direction: column;
@@ -84,16 +92,19 @@ body {
   align-items: center;
 }
 
+/*paragrafo de descrição do clima*/
 #description {
   font-weight: bold;
   text-transform: capitalize;
 }
 
+/*icone abaixo da descrição de imagem, que a ilustra.*/
 #decription_container img {
   height:40px;
   width: 40px;
 }
 
+/*container onde fica informações como umidade e vento*/
 #details_container {
   padding-top: 0.5em;
   display: flex;
