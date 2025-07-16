@@ -64,7 +64,7 @@ body {
 
 /*RESULTADOS DA API*/
 
-#weather_data h2{
+#weather-data h2{
   text-align: center;
   color: rgb(241, 241, 241);
   padding-top: 1em;
@@ -72,7 +72,7 @@ body {
   margin-top: 1em;
 }
 
-#weather_data img {
+#weather-data img {
   height: 15px;
   width: 21px;
 }
@@ -82,6 +82,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#description {
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
 #decription_container img {

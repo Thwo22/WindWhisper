@@ -9,6 +9,7 @@ const weatherIConElement = document.querySelector("#weather-icon");
 const umidityElement = document.querySelector("#umidity span");
 const windElement = document.querySelector("#wind span");
 const countryImgElement = document.querySelector("h2 img");
+const weatherContainer = document.querySelector("#weather-data")
 
 //funcoes
 
@@ -31,13 +32,16 @@ const showWeatherData = async (city) => {
 
     descElement.innerText = data.weather[0].description;
 
-    weatherIConElement.setAttribute("src", `http://openweathermap.org/img/wn/${icon}.png`);
+    weatherIConElement.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`);
 
     umidityElement.innerText = `${data.main.humidity}%`;
 
     windElement.innerText = `${data.wind.speed}km/h`;
+
+    const countryCode = data.sys.country.toLowerCase();
+    countryImgElement.setAttribute("src", `https://flagcdn.com/16x12/${countryCode}.png`);
     
-    console.log(data);
+    weatherContainer.classList.remove("hide");
 };
 
 //eventos
@@ -49,5 +53,13 @@ const showWeatherData = async (city) => {
     const city = cityInput.value;
 
     showWeatherData(city);
+});
+
+cityInput.addEventListener("keyup", (e) => {
+    if(e.code === "Enter") {
+        const city = e.target.value
+
+        showWeatherData(city);
+    }
 });
 
